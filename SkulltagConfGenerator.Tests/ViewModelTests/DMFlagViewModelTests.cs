@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SkulltagConfGenerator.Enumerations;
-using SkulltagConfGenerator.GUI.ViewModel.Flags;
+using SkulltagConfGenerator.GUI.ViewModel;
+using SkulltagConfGenerator.GUI.Model;
+using SkulltagConfGenerator.Domain.Model;
 
 namespace SkulltagConfGenerator.Tests.ViewModelTests {
 
@@ -15,7 +17,7 @@ namespace SkulltagConfGenerator.Tests.ViewModelTests {
 		public void FlagsValue_SetFlagsValueToPowerOfTwoNumber_GetSingleFlagBack() {
 			DMFlags testFlag = DMFlags.KillOnExit;
 
-			DMFlagViewModel viewModel = new DMFlagViewModel() {
+			FlagViewModel<DMFlag, DMFlags> viewModel = new FlagViewModel<DMFlag, DMFlags>(new DMFlagsWrapper()) {
 				FlagsValue = 1024
 			};
 
@@ -28,7 +30,7 @@ namespace SkulltagConfGenerator.Tests.ViewModelTests {
 		public void FlagsValue_SetFlagsValueTwoFlags_GetTwoFlagsBack() {
 			DMFlags testFlag = DMFlags.KillOnExit | DMFlags.SpawnPlayersFarAway;
 
-			DMFlagViewModel viewModel = new DMFlagViewModel() {
+			FlagViewModel<DMFlag, DMFlags> viewModel = new FlagViewModel<DMFlag, DMFlags>(new DMFlagsWrapper()) {
 				FlagsValue = 1024 | 128
 			};
 
@@ -44,7 +46,7 @@ namespace SkulltagConfGenerator.Tests.ViewModelTests {
 								DMFlags.RespawnDeadPlayers | 
 								DMFlags.MegaPowerupsRespawn;
 
-			DMFlagViewModel viewModel = new DMFlagViewModel() {
+			FlagViewModel<DMFlag, DMFlags> viewModel = new FlagViewModel<DMFlag, DMFlags>(new DMFlagsWrapper()) {
 				FlagsValue = 1024 | 128 | 256 | 262144
 			};
 

@@ -71,8 +71,6 @@
     <Compile Include="UserControls\FlagTemplate.xaml.cs">
       <DependentUpon>FlagTemplate.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\Flags\DMFlag2ViewModel.cs" />
-    <Compile Include="ViewModel\Flags\DMFlagViewModel.cs" />
     <Compile Include="ViewModel\Flags\FlagViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />

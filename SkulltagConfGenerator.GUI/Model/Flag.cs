@@ -21,17 +21,29 @@ namespace SkulltagConfGenerator.GUI.Model {
 			get {
 				return this.value;
 			}
+
+			set {
+				this.value = value;
+			}
 		}
 
 		public string Name {
 			get {
 				return this.name;
 			}
+
+			set {
+				this.name = value;
+			}
 		}
 
 		public string Description {
 			get {
 				return string.Format("{0} ({1})", this.description, this.value);
+			}
+
+			set {
+				this.description = value;
 			}
 		}
 
@@ -47,6 +59,8 @@ namespace SkulltagConfGenerator.GUI.Model {
 		}
 
 		#endregion
+
+		public Flag() { }
 
 		public Flag(int value, string name, string description) {
 			this.IsEnabled = false;
