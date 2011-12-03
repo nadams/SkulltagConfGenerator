@@ -40,7 +40,6 @@ namespace SkulltagConfGenerator.Enumerations.Utils {
 			Type t = value.GetType();
 
 			FieldInfo info = t.GetField(value.ToString());
-
 			AlternateNameAttribute[] alternateNames = info.GetCustomAttributes(typeof(AlternateNameAttribute), false) as AlternateNameAttribute[];
 
 			if(alternateNames != null) {

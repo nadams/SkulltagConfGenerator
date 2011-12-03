@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SkulltagConfGenerator.Enumerations;
-using SkulltagConfGenerator.GUI.ViewModel.Flags;
+using SkulltagConfGenerator.GUI.ViewModel;
+using SkulltagConfGenerator.GUI.Model;
+using SkulltagConfGenerator.Domain.Model;
 
 namespace SkulltagConfGenerator.Tests.ViewModelTests {
 
@@ -15,7 +17,7 @@ namespace SkulltagConfGenerator.Tests.ViewModelTests {
 		public void FlagsValue_SetFlagsValueToPowerOfTwoNumber_GetSingleFlagBack() {
 			DMFlags2 testFlag = DMFlags2.NoRespawnProtection;
 
-			DMFlag2ViewModel viewModel = new DMFlag2ViewModel() {
+			FlagViewModel<DMFlag2, DMFlags2> viewModel = new FlagViewModel<DMFlag2, DMFlags2>(new DMFlags2Wrapper()) {
 				FlagsValue = 1024
 			};
 
@@ -28,7 +30,7 @@ namespace SkulltagConfGenerator.Tests.ViewModelTests {
 		public void FlagsValue_SetFlagsValueTwoFlags_GetTwoFlagsBack() {
 			DMFlags2 testFlag = DMFlags2.NoRespawnProtection | DMFlags2.HealthDrain;
 
-			DMFlag2ViewModel viewModel = new DMFlag2ViewModel() {
+			FlagViewModel<DMFlag2, DMFlags2> viewModel = new FlagViewModel<DMFlag2, DMFlags2>(new DMFlags2Wrapper()) {
 				FlagsValue = 1024 | 128
 			};
 
@@ -44,7 +46,7 @@ namespace SkulltagConfGenerator.Tests.ViewModelTests {
 								DMFlags2.BFGFreelook |
 								DMFlags2.EnforceOpenGLRenderingOptions;
 
-			DMFlag2ViewModel viewModel = new DMFlag2ViewModel() {
+			FlagViewModel<DMFlag2, DMFlags2> viewModel = new FlagViewModel<DMFlag2, DMFlags2>(new DMFlags2Wrapper()) {
 				FlagsValue = 1024 | 128 | 256 | 262144
 			};
 
