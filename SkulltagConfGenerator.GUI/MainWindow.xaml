@@ -20,13 +20,15 @@
             </MenuItem>
         </Menu>
         <DockPanel LastChildFill="True" DockPanel.Dock="Bottom">
-            <!--<StackPanel Orientation="Vertical" DockPanel.Dock="Left">
-                <Expander Header="Display" x:Name="DisplayOptionsContainer" />
-                <Expander Header="Gameplay" x:Name="GameplayOptionsContainer" />
-                <Expander Header="Backend" x:Name="BackendOptionsContainer" />
-            </StackPanel>
-            <TextBlock DockPanel.Dock="Right" IsEnabled="False" />-->
-			<st:DMFlagsUserControl />
+			<TabControl>
+				<TabItem Header="DMFlags">
+					<st:DMFlagsUserControl />
+				</TabItem>
+				
+				<TabItem Header="DMFlags2">
+					<st:DMFlags2UserControl />
+				</TabItem>
+			</TabControl>
         </DockPanel>
     </DockPanel>
 </Window>
