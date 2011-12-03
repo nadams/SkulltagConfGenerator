@@ -66,10 +66,14 @@ namespace SkulltagConfGenerator.GUI.ViewModel {
 						Description = x.GetStringValue(),
 						IsEnabled = false,
 						Name = x.GetAlternateName(),
-						Value = x.GetValue()
+						Value = x.GetValue(),
 					}
 				)		
 			);
+
+			foreach(var model in this.flags) {
+				model.PropertyChanged += new PropertyChangedEventHandler(RaiseFlagsValuePropertyChange);
+			}
 		}
 	
 		protected virtual void RaiseFlagsValuePropertyChange(object sender, PropertyChangedEventArgs e) {
