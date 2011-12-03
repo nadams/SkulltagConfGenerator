@@ -31,7 +31,7 @@ namespace SkulltagConfGenerator.GUI.Model {
 
 		public string Description {
 			get {
-				return this.description;
+				return string.Format("{0} ({1})", this.description, this.value);
 			}
 		}
 

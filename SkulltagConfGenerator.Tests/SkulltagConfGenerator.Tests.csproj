@@ -55,6 +55,7 @@
     <Compile Include="ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkulltagConfigTests.cs" />
+    <Compile Include="ViewModelTests\DMFlagViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SkulltagConfGenerator.Domain\SkulltagConfGenerator.Domain.csproj">
@@ -64,6 +65,10 @@
     <ProjectReference Include="..\SkulltagConfGenerator.Enumerations\SkulltagConfGenerator.Enumerations.csproj">
       <Project>{7BFA43FE-583E-4C0C-ABB6-4D266E93D8BD}</Project>
       <Name>SkulltagConfGenerator.Enumerations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkulltagConfGenerator.GUI\SkulltagConfGenerator.GUI.csproj">
+      <Project>{9AEFF242-CC04-45DB-A0E8-3823B1327E53}</Project>
+      <Name>SkulltagConfGenerator.GUI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
