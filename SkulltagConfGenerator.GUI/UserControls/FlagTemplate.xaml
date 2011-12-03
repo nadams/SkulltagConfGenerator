@@ -24,7 +24,8 @@
 		<TextBox 
 			Text="{Binding Path=FlagsValue, 
 				Mode=TwoWay,
-				Converter={StaticResource ResourceKey=IntToStringConverter}}" 
+				Converter={StaticResource ResourceKey=IntToStringConverter},
+				UpdateSourceTrigger=PropertyChanged}" 
 		/>
 	</StackPanel>
 </UserControl>

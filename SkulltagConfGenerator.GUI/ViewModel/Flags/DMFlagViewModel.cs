@@ -22,7 +22,7 @@ namespace SkulltagConfGenerator.GUI.ViewModel.Flags {
 				int flag = 0;
 
 				foreach(DMFlag dmflag in this.FlagModel.Where(x => x.IsEnabled)) {
-					flag += dmflag.Value;
+					flag |= dmflag.Value;
 				}
 
 				return flag;
@@ -30,11 +30,10 @@ namespace SkulltagConfGenerator.GUI.ViewModel.Flags {
 
 			set {
 				DMFlags flag = (DMFlags)value;
-				IEnumerable<DMFlags> splitFlags = flag.GetIndividualValues<DMFlags>();
-				IEnumerable<string> splitFlagsAlternateNames = splitFlags.Select(x => x.GetFirstAlternateName());
 
+				IEnumerable<DMFlags> validFlags = flag.GetIndividualValues<DMFlags>();
+				IEnumerable<string> splitFlagsAlternateNames = validFlags.Select(x => x.GetFirstAlternateName());
 				IEnumerable<DMFlag> enabledFlags = this.flags.Where(dmflag => splitFlagsAlternateNames.Contains(dmflag.Name));
-
 				foreach(DMFlag dmflag in this.flags) {
 					dmflag.IsEnabled = false;
 				}
