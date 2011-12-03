@@ -11,6 +11,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SkulltagConfGenerator.GUI.ViewModel;
+using SkulltagConfGenerator.GUI.Model;
+using SkulltagConfGenerator.Enumerations;
+using SkulltagConfGenerator.Domain.Model;
 
 namespace SkulltagConfGenerator.GUI.UserControls {
 	/// <summary>
@@ -19,6 +23,8 @@ namespace SkulltagConfGenerator.GUI.UserControls {
 	public partial class DMFlags2UserControl : UserControl {
 		public DMFlags2UserControl() {
 			InitializeComponent();
+
+			this.DataContext = new FlagViewModel<DMFlag2, DMFlags2>(new DMFlags2Wrapper());
 		}
 	}
 }

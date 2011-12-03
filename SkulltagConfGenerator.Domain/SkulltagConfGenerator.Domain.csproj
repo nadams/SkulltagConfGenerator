@@ -51,6 +51,7 @@
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Model\DMFlags2Wrapper.cs" />
     <Compile Include="Model\DMFlagsWrapper.cs" />
     <Compile Include="Model\IFlagWrapper.cs" />
     <Compile Include="Model\SkulltagConfig.cs" />
