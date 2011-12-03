@@ -63,15 +63,11 @@ namespace SkulltagConfGenerator.GUI.ViewModel.Flags {
 
 			foreach(DMFlags item in Enum.GetValues(typeof(DMFlags))) {
 				DMFlag flag = new DMFlag(item);
-				flag.PropertyChanged += new PropertyChangedEventHandler(flag_PropertyChanged);
+				flag.PropertyChanged += new PropertyChangedEventHandler(this.RaiseFlagsValuePropertyChange);
 				flags.Add(flag);
 			}
 
 			this.flags = flags;
-		}
-
-		public void flag_PropertyChanged(object sender, PropertyChangedEventArgs e) {
-			this.RaisePropertyChanged("FlagsValue");
 		}
 	}
 }
