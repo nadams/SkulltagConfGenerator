@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using SkulltagConfGenerator.Enumerations;
 using SkulltagConfGenerator.Domain.Extensions;
+using SkulltagConfGenerator.Enumerations;
 using SkulltagConfGenerator.Enumerations.Utils;
 
 namespace SkulltagConfGenerator.Domain.Model {

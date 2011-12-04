@@ -6,25 +6,24 @@ using SkulltagConfGenerator.Enumerations;
 using SkulltagConfGenerator.Enumerations.Utils;
 
 namespace SkulltagConfGenerator.Domain.Model {
-	public class DMFlagsWrapper : IFlagWrapper<DMFlags> {
-
+	public class CompatFlagsWrapper : IFlagWrapper<CompatFlags> {
 		#region Fields
 
-		private DMFlags flag;
+		private CompatFlags flag;
 
 		#endregion
 
-		public DMFlagsWrapper() {
+		public CompatFlagsWrapper() {
 			this.flag = 0;
 		}
 
-		public DMFlagsWrapper(int value) {
-			this.flag = (DMFlags)value;
+		public CompatFlagsWrapper(int value) {
+			this.flag = (CompatFlags)value;
 		}
 
-		public IEnumerable<IFlagWrapper<DMFlags>> GetAllFlags() {
-			foreach(DMFlags dmflag in Enum.GetValues(typeof(DMFlags))) {
-				yield return new DMFlagsWrapper((int)dmflag);
+		public IEnumerable<IFlagWrapper<CompatFlags>> GetAllFlags() {
+			foreach(CompatFlags dmflag in Enum.GetValues(typeof(CompatFlags))) {
+				yield return new CompatFlagsWrapper((int)dmflag);
 			}
 		}
 
@@ -34,11 +33,11 @@ namespace SkulltagConfGenerator.Domain.Model {
 			return alternateNames;
 		}
 
-		public IEnumerable<IFlagWrapper<DMFlags>> GetFlags(int value) {
-			DMFlags flag = (DMFlags)value;
+		public IEnumerable<IFlagWrapper<CompatFlags>> GetFlags(int value) {
+			CompatFlags flag = (CompatFlags)value;
 
-			foreach(var dmflag in flag.GetIndividualValues<DMFlags>()) {
-				yield return new DMFlagsWrapper((int)dmflag);
+			foreach(var dmflag in flag.GetIndividualValues<CompatFlags>()) {
+				yield return new CompatFlagsWrapper((int)dmflag);
 			}
 		}
 
