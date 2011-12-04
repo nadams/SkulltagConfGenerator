@@ -65,6 +65,12 @@
     <Compile Include="Model\DMFlag2.cs" />
     <Compile Include="Model\DMFlag3.cs" />
     <Compile Include="Model\Flag.cs" />
+    <Compile Include="UserControls\CompatFlags2UserControl.xaml.cs">
+      <DependentUpon>CompatFlags2UserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CompatFlagsUserControl.xaml.cs">
+      <DependentUpon>CompatFlagsUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DMFlags2UserControl.xaml.cs">
       <DependentUpon>DMFlags2UserControl.xaml</DependentUpon>
     </Compile>
@@ -97,6 +103,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\CompatFlags2UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CompatFlagsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\DMFlags2UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

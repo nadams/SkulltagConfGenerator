@@ -28,6 +28,18 @@
 				<TabItem Header="DMFlags2">
 					<st:DMFlags2UserControl />
 				</TabItem>
+
+				<TabItem Header="DMFlags3">
+					<st:DMFlags3UserControl />
+				</TabItem>
+
+				<TabItem Header="CompatFlags">
+					<st:CompatFlagsUserControl />
+				</TabItem>
+
+				<TabItem Header="CompatFlags">
+					<st:CompatFlags2UserControl />
+				</TabItem>
 			</TabControl>
         </DockPanel>
     </DockPanel>
