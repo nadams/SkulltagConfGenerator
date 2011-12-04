@@ -2,4 +2,5 @@
 *\obj
 *.user
 *.suo
+SkulltagConfGenerator.suo
 TestResults
