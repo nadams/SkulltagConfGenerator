@@ -11,7 +11,7 @@ using SkulltagConfGenerator.Domain.Model;
 namespace SkulltagConfGenerator.Tests.ViewModelTests {
 
 	[TestClass]
-	public class FlagViewModelTests {
+	public class DMFlagsViewModelTests {
 
 		[TestMethod]
 		public void FlagsValue_SetFlagsValueToPowerOfTwoNumber_GetSingleFlagBack() {
