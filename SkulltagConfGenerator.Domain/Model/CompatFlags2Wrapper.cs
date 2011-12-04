@@ -22,8 +22,8 @@ namespace SkulltagConfGenerator.Domain.Model {
 		}
 
 		public IEnumerable<IFlagWrapper<CompatFlags2>> GetAllFlags() {
-			foreach(CompatFlags2 dmflag in Enum.GetValues(typeof(CompatFlags2))) {
-				yield return new CompatFlags2Wrapper((int)dmflag);
+			foreach(CompatFlags2 compatflag in Enum.GetValues(typeof(CompatFlags2))) {
+				yield return new CompatFlags2Wrapper((int)compatflag);
 			}
 		}
 
@@ -36,8 +36,8 @@ namespace SkulltagConfGenerator.Domain.Model {
 		public IEnumerable<IFlagWrapper<CompatFlags2>> GetFlags(int value) {
 			CompatFlags2 flag = (CompatFlags2)value;
 
-			foreach(var dmflag in flag.GetIndividualValues<CompatFlags2>()) {
-				yield return new CompatFlags2Wrapper((int)dmflag);
+			foreach(var compatflag in flag.GetIndividualValues<CompatFlags2>()) {
+				yield return new CompatFlags2Wrapper((int)compatflag);
 			}
 		}
 
