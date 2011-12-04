@@ -23,8 +23,6 @@ namespace SkulltagConfGenerator.GUI.UserControls {
 	public partial class DMFlagsUserControl : UserControl {
 		public DMFlagsUserControl() {
 			InitializeComponent();
-
-			this.DataContext = new FlagViewModel<DMFlag, DMFlags>(new DMFlagsWrapper());
 		}
 	}
 }
