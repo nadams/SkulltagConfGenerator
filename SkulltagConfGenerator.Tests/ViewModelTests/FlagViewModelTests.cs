@@ -11,46 +11,46 @@ using SkulltagConfGenerator.Domain.Model;
 namespace SkulltagConfGenerator.Tests.ViewModelTests {
 
 	[TestClass]
-	public class DMFlag2ViewModelTests {
+	public class FlagViewModelTests {
 
 		[TestMethod]
 		public void FlagsValue_SetFlagsValueToPowerOfTwoNumber_GetSingleFlagBack() {
-			DMFlags2 testFlag = DMFlags2.NoRespawnProtection;
+			DMFlags testFlag = DMFlags.KillOnExit;
 
-			FlagViewModel<DMFlag2, DMFlags2> viewModel = new FlagViewModel<DMFlag2, DMFlags2>(new DMFlags2Wrapper()) {
+			FlagViewModel<DMFlag, DMFlags> viewModel = new FlagViewModel<DMFlag, DMFlags>(new DMFlagsWrapper()) {
 				FlagsValue = 1024
 			};
 
-			DMFlags2 resultFlag = (DMFlags2)viewModel.FlagsValue;
+			DMFlags resultFlag = (DMFlags)viewModel.FlagsValue;
 
 			Assert.AreEqual(testFlag, resultFlag);
 		}
 
 		[TestMethod]
 		public void FlagsValue_SetFlagsValueTwoFlags_GetTwoFlagsBack() {
-			DMFlags2 testFlag = DMFlags2.NoRespawnProtection | DMFlags2.HealthDrain;
+			DMFlags testFlag = DMFlags.KillOnExit | DMFlags.SpawnPlayersFarAway;
 
-			FlagViewModel<DMFlag2, DMFlags2> viewModel = new FlagViewModel<DMFlag2, DMFlags2>(new DMFlags2Wrapper()) {
+			FlagViewModel<DMFlag, DMFlags> viewModel = new FlagViewModel<DMFlag, DMFlags>(new DMFlagsWrapper()) {
 				FlagsValue = 1024 | 128
 			};
 
-			DMFlags2 resultFlag = (DMFlags2)viewModel.FlagsValue;
+			DMFlags resultFlag = (DMFlags)viewModel.FlagsValue;
 
 			Assert.AreEqual(testFlag, resultFlag);
 		}
 
 		[TestMethod]
 		public void FlagsValue_SetFlagsValueFourFlags_GetFourFlagsBack() {
-			DMFlags2 testFlag = DMFlags2.NoRespawnProtection |
-								DMFlags2.HealthDrain |
-								DMFlags2.BFGFreelook |
-								DMFlags2.EnforceOpenGLRenderingOptions;
+			DMFlags testFlag =  DMFlags.KillOnExit | 
+								DMFlags.SpawnPlayersFarAway | 
+								DMFlags.RespawnDeadPlayers | 
+								DMFlags.MegaPowerupsRespawn;
 
-			FlagViewModel<DMFlag2, DMFlags2> viewModel = new FlagViewModel<DMFlag2, DMFlags2>(new DMFlags2Wrapper()) {
+			FlagViewModel<DMFlag, DMFlags> viewModel = new FlagViewModel<DMFlag, DMFlags>(new DMFlagsWrapper()) {
 				FlagsValue = 1024 | 128 | 256 | 262144
 			};
 
-			DMFlags2 resultFlag = (DMFlags2)viewModel.FlagsValue;
+			DMFlags resultFlag = (DMFlags)viewModel.FlagsValue;
 
 			Assert.AreEqual(testFlag, resultFlag);
 		}
