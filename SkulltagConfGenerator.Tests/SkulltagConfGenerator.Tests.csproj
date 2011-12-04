@@ -55,7 +55,11 @@
     <Compile Include="ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SkulltagConfigTests.cs" />
-    <Compile Include="ViewModelTests\FlagViewModelTests.cs" />
+    <Compile Include="ViewModelTests\CompatFlags2ViewModelTests.cs" />
+    <Compile Include="ViewModelTests\CompatFlagsViewModelTests.cs" />
+    <Compile Include="ViewModelTests\DMFlags2ViewModelTests.cs" />
+    <Compile Include="ViewModelTests\DMFlags3ViewModel.cs" />
+    <Compile Include="ViewModelTests\DMFlagViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SkulltagConfGenerator.Domain\SkulltagConfGenerator.Domain.csproj">
