@@ -6,9 +6,9 @@
 			 xmlns:flags="clr-namespace:SkulltagConfGenerator.GUI.ViewModel"
 			 xmlns:controls="clr-namespace:SkulltagConfGenerator.GUI.UserControls"
 			 mc:Ignorable="d">
-	<!--<UserControl.DataContext>
-		<flags:FlagViewModel markup:TypeArgument="" />
-	</UserControl.DataContext>-->
+	<UserControl.DataContext>
+		<flags:CompatFlagsViewModel />
+	</UserControl.DataContext>
 	<StackPanel>
 		<controls:FlagTemplate />
 		<DockPanel LastChildFill="False">

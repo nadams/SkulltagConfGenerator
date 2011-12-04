@@ -11,17 +11,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using SkulltagConfGenerator.GUI.ViewModel;
-using SkulltagConfGenerator.GUI.Model;
-using SkulltagConfGenerator.Enumerations;
-using SkulltagConfGenerator.Domain.Model;
 
 namespace SkulltagConfGenerator.GUI.UserControls {
 	/// <summary>
-	/// Interaction logic for DMFlagsUserControl.xaml
+	/// Interaction logic for CompatFlags2UserControl.xaml
 	/// </summary>
-	public partial class DMFlagsUserControl : UserControl {
-		public DMFlagsUserControl() {
+	public partial class CompatFlags2UserControl : UserControl {
+		public CompatFlags2UserControl() {
 			InitializeComponent();
 		}
 	}

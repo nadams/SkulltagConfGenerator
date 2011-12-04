@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="SkulltagConfGenerator.GUI.UserControls.DMFlags2UserControl"
+﻿<UserControl x:Class="SkulltagConfGenerator.GUI.UserControls.CompatFlags2UserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,7 +7,7 @@
 			 xmlns:controls="clr-namespace:SkulltagConfGenerator.GUI.UserControls"
 			 mc:Ignorable="d">
 	<UserControl.DataContext>
-		<flags:DMFlags2ViewModel />
+		<flags:CompatFlags2ViewModel />
 	</UserControl.DataContext>
 	<StackPanel>
 		<controls:FlagTemplate />

@@ -59,11 +59,23 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\IntToStringConverter.cs" />
+    <Compile Include="Model\CompatFlag.cs" />
+    <Compile Include="Model\CompatFlag2.cs" />
     <Compile Include="Model\DMFlag.cs" />
     <Compile Include="Model\DMFlag2.cs" />
+    <Compile Include="Model\DMFlag3.cs" />
     <Compile Include="Model\Flag.cs" />
+    <Compile Include="UserControls\CompatFlags2UserControl.xaml.cs">
+      <DependentUpon>CompatFlags2UserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CompatFlagsUserControl.xaml.cs">
+      <DependentUpon>CompatFlagsUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DMFlags2UserControl.xaml.cs">
       <DependentUpon>DMFlags2UserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DMFlags3UserControl.xaml.cs">
+      <DependentUpon>DMFlags3UserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DMFlagsUserControl.xaml.cs">
       <DependentUpon>DMFlagsUserControl.xaml</DependentUpon>
@@ -71,6 +83,11 @@
     <Compile Include="UserControls\FlagTemplate.xaml.cs">
       <DependentUpon>FlagTemplate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\CompatFlags2ViewModel.cs" />
+    <Compile Include="ViewModel\CompatFlagsViewModel.cs" />
+    <Compile Include="ViewModel\DMFlags2ViewModel.cs" />
+    <Compile Include="ViewModel\DMFlags3ViewModel.cs" />
+    <Compile Include="ViewModel\DMFlagsViewModel.cs" />
     <Compile Include="ViewModel\FlagViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -86,7 +103,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\CompatFlags2UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CompatFlagsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\DMFlags2UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\DMFlags3UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
