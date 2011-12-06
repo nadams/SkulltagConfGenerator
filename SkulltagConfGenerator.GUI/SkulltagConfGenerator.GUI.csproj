@@ -80,7 +80,7 @@
     <Compile Include="UserControls\DMFlagsUserControl.xaml.cs">
       <DependentUpon>DMFlagsUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\FlagTemplate.xaml.cs">
+    <Compile Include="Resources\FlagTemplate.xaml.cs">
       <DependentUpon>FlagTemplate.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\CompatFlags2ViewModel.cs" />
@@ -123,7 +123,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\FlagTemplate.xaml">
+    <Page Include="Resources\FlagTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

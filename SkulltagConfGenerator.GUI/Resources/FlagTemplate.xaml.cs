@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SkulltagConfGenerator.GUI.UserControls {
+namespace SkulltagConfGenerator.GUI.Resources {
 	/// <summary>
 	/// Interaction logic for FlagTemplate.xaml
 	/// </summary>
